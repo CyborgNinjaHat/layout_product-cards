@@ -1,9 +1,9 @@
-.product-card {
-  $padding: 1rem;
+.card {
+  $card-padding: 1rem;
 
   width: 12.5rem;
   border: 1px solid $color-border;
-  padding: $padding * 2 $padding $padding;
+  padding: $card-padding * 2 $card-padding $card-padding;
 
   color: $color-text-primary;
   letter-spacing: 0%;
@@ -17,17 +17,17 @@
   }
 
   &__title {
+    margin-bottom: 0.25rem;
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.125rem;
-    margin-bottom: 0.25rem;
   }
 
   &__code {
+    margin-bottom: 1rem;
     color: $color-text-secondary;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    margin-bottom: 1rem;
   }
 
   &__rating {
@@ -50,32 +50,36 @@
   }
 
   &__price-label {
+    color: $color-text-secondary;
     font-size: 0.75rem;
     line-height: 1.125rem;
-    color: $color-text-secondary;
   }
 
   &__price-value {
-    line-height: 1.125rem;
     color: $color-text-primary;
     font-weight: 700;
+    line-height: 1.125rem;
   }
 
-  &__button {
+  &__purchase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 2.5rem;
-    background-color: $color-action;
     border: 1px solid $color-action;
+    border-radius: 5px;
     color: $color-surface;
     font-size: 0.875rem;
     font-weight: 700;
+    text-decoration: none;
     text-transform: uppercase;
     line-height: 1rem;
-    border-radius: 5px;
+    background-color: $color-action;
 
     &:hover {
-      background-color: transparent;
       color: $color-action;
+      background-color: transparent;
     }
   }
 }
